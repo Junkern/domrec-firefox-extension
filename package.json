@@ -1,0 +1,18 @@
+{
+  "name": "domrec-firefox-extension",
+  "version": "0.0.1",
+  "description": "Firefox extension to use domrec-core for recording.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "web-ext build --overwrite-dest",
+    "lint": "web-ext lint",
+    "update-domrec": "npm install --save-dev domrec-core && cp ./node_modules/domrec-core/dist/recording.js content-scripts/recording.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "domrec-core": "0.0.2",
+    "web-ext": "^5.4.0"
+  }
+}

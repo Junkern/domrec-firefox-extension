@@ -1,0 +1,31 @@
+{
+
+    "manifest_version": 2,
+    "name": "DOMRec Extension",
+    "version": "1.0",
+
+    "background": {
+        "scripts": ["background-script.js"]
+    },
+  
+    "browser_action": {
+        "default_icon": "icons/beasts-48.png",
+        "default_title": "DOM Recorder",
+        "default_popup": "popup/index.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "<all_urls>",
+        "downloads"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content-scripts/controller.js", "content-scripts/recording.js"]
+      }
+    ]
+  
+  }
